@@ -156,7 +156,8 @@ a {
 }
 .content {
   position: relative;
-  width: 1024px;
+  width: 1050px;
+  height: 1480.5px;
   margin: 50px auto;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -166,6 +167,7 @@ a {
   box-shadow: 0 0 15px #c0c0c0;
   background-color: #fff;
   overflow: hidden;
+  transform-origin: center top;
 }
 @media screen and (max-width: 1024px) {
   .content {
@@ -179,7 +181,6 @@ a {
 
 .content-hd {
   width: 100%;
-  height: inherit;
   color: #fff;
   background-color: #eee;
   overflow: hidden;
@@ -739,4 +740,19 @@ footer.print-footer {
     color: #c0c0c0;
     display: inline-block;
   }
+}
+
+.scale-btn{
+  position: fixed;
+  z-index: 10;
+  bottom: 6px;
+  left: 50%;
+  margin-left: 600px;
+  padding: 0 8px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  background-color: #0f88eb;
+  cursor: pointer;
 }

@@ -5,7 +5,6 @@
     <meta charset=utf-8>
     <meta http-equiv=X-UA-Compatible content="IE=edge">
     <meta name=viewport content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <meta name="format-detection" content="telephone=no" />
     <meta name="format-detection" content="email=no" />
     <title>简历 | 赵昱光 - Eddie Zhao</title>
@@ -13,8 +12,9 @@
 </head>
 
 <body>
-    <a class=pdf href=#><i class="iconfont icon-pdf"></i> PDF简历</a>
-    <main class=content>
+    <a class=pdf href="resume.pdf"><i class="iconfont icon-pdf"></i> PDF简历</a>
+    <div class="scale-btn" id="scale-btn">放大</div>
+    <main class=content  id="main">
         <header class="content-hd">
             <section class="hd-main">
                 <div class=name>
@@ -331,6 +331,20 @@
         </section>
     </main>
 
+    <script>
+        const $main = document.querySelector('#main')
+        const $scaleBtn = document.querySelector('#scale-btn')
+        let isScale = false
+
+        $scaleBtn.addEventListener('click', () => {
+            if (isScale) {
+                $main.style.transform = 'scale(1)'
+            } else {
+                $main.style.transform = 'scale(1.352)'
+            }
+            isScale = !isScale
+        }, false)
+    </script>
 </body>
 
 
